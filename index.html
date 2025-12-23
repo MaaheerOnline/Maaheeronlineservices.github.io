@@ -9,38 +9,39 @@
 body{
   margin:0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:#fff;
+  background:#f2f4f8;
+  color:#000;
 }
 
 .header{
+  background:#0b3c5d;
+  color:#fff;
   text-align:center;
-  padding:20px 10px;
-  font-size:26px;
+  padding:18px;
+  font-size:24px;
   font-weight:bold;
 }
 
 .sub{
-  text-align:center;
   font-size:13px;
   opacity:0.9;
-  margin-bottom:15px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:15px;
   padding:15px;
 }
 
 .card{
-  background:#ffffff;
-  color:#000;
-  border-radius:16px;
-  padding:18px 10px;
+  background:#fff;
+  border-radius:14px;
+  padding:15px 10px;
   text-align:center;
-  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+  text-decoration:none;
+  color:#000;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
   transition:0.3s;
 }
 
@@ -49,11 +50,12 @@ body{
 }
 
 .card img{
-  width:50px;
+  width:70px;
   margin-bottom:8px;
 }
 
 .card span{
+  display:block;
   font-size:14px;
   font-weight:bold;
 }
@@ -63,7 +65,7 @@ body{
   bottom:0;
   left:0;
   width:100%;
-  background:#000;
+  background:#0b3c5d;
   display:flex;
   justify-content:space-around;
   padding:10px 0;
@@ -72,7 +74,6 @@ body{
 .bottom-bar a{
   color:#fff;
   text-decoration:none;
-  font-size:14px;
   font-weight:bold;
 }
 </style>
@@ -80,57 +81,55 @@ body{
 
 <body>
 
-<div class="header">MAAHEER</div>
-<div class="sub">ONLINE SERVICES</div>
+<div class="header">
+  MAAHEER<br>
+  <span class="sub">ONLINE SERVICES</span>
+</div>
 
 <div class="grid">
 
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-    <span>PAN Card Apply</span>
-  </div>
-
-  <a href="https://wa.me/919494133921?text=Hello%20I%20want%20Aadhaar%20PDF" class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
-  <span>Aadhaar PDF</span>
+  <!-- PAN -->
+  <a href="https://wa.me/919494133921?text=నాకు%20పాన్%20కార్డు%20దరఖాస్తు%20చేయాలి.%20వివరాలు%20చెప్పండి." class="card">
+    <img src="https://img.icons8.com/color/96/india-pan-card.png">
+    <span>పాన్ కార్డు</span>
   </a>
-    <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
-    <span>Aadhaar PDF</span>
-  </div>
 
-  <a href="https://wa.me/919494133921?text=Hello%20I%20want%20Voter%20ID%20Service" class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png">
-  <span>Voter ID</span>
+  <!-- Aadhaar -->
+  <a href="https://wa.me/919494133921?text=నాకు%20ఆధార్%20కార్డు%20PDF%20డౌన్లోడ్%20కావాలి.%20సహాయం%20చేయండి." class="card">
+    <img src="https://img.icons8.com/color/96/aadhaar-card.png">
+    <span>ఆధార్ కార్డు</span>
   </a>
-    <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png">
-    <span>Voter ID</span>
-  </div>
 
-  <a href="https://wa.me/919494133921?text=Hello%20I%20want%20Vehicle%20RC%20Download" class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/1048/1048313.png">
-  <span>Vehicle RC</span>
+  <!-- Voter -->
+  <a href="https://wa.me/919494133921?text=నాకు%20వోటర్%20ఐడి%20కార్డు%20సేవ%20కావాలి.%20వివరాలు%20చెప్పండి." class="card">
+    <img src="https://img.icons8.com/color/96/voter-id.png">
+    <span>వోటర్ ఐడి</span>
   </a>
-    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048313.png">
-    <span>Vehicle RC</span>
-  </div>
 
-  <a href="https://wa.me/919494133921?text=Hello%20I%20want%20Driving%20Licence%20Service" class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
-  <span>Driving Licence</span>
+  <!-- RC -->
+  <a href="https://wa.me/919494133921?text=నాకు%20వాహన%20ఆర్‌సీ%20PDF%20డౌన్లోడ్%20కావాలి.%20సహాయం%20చేయండి." class="card">
+    <img src="https://img.icons8.com/color/96/vehicle-registration.png">
+    <span>వాహన RC</span>
   </a>
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
-    <span>Driving Licence</span>
-  </div>
 
-  <a href="https://wa.me/919494133921?text=Hello%20I%20want%20Vehicle%20Insurance" class="card">
-  <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png">
-  <span>Insurance</span>
+  <!-- DL -->
+  <a href="https://wa.me/919494133921?text=నాకు%20డ్రైవింగ్%20లైసెన్స్‌కు%20సంబంధించిన%20సేవ%20కావాలి.%20వివరాలు%20చెప్పండి." class="card">
+    <img src="https://img.icons8.com/color/96/driving-license.png">
+    <span>డ్రైవింగ్ లైసెన్స్</span>
   </a>
-    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png">
-    <span>Insurance</span>
-  </div>
+
+  <!-- Insurance -->
+  <a href="https://wa.me/919494133921?text=నాకు%20వాహన%20బీమా%20సేవ%20కావాలి.%20వివరాలు%20చెప్పండి." class="card">
+    <img src="https://img.icons8.com/color/96/insurance.png">
+    <span>వాహన బీమా</span>
+  </a>
 
 </div>
 
 <div class="bottom-bar">
-  <a href="
+  <a href="tel:9494133921">📞 కాల్</a>
+  <a href="https://wa.me/919494133921">💬 వాట్సాప్</a>
+</div>
+
+</body>
+</html>
