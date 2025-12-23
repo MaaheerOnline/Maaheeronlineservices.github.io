@@ -9,69 +9,71 @@
 body{
   margin:0;
   font-family: Arial, sans-serif;
-  background:#004d99;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color:#fff;
 }
 
 .header{
   text-align:center;
-  padding:30px 10px 10px;
-  font-size:32px;
+  padding:20px 10px;
+  font-size:26px;
   font-weight:bold;
 }
 
-.header-sub{
+.sub{
   text-align:center;
-  font-size:14px;
-  margin-bottom:20px;
+  font-size:13px;
+  opacity:0.9;
+  margin-bottom:15px;
 }
 
-.service{
-  background:#1a75ff;
-  margin:15px auto;
-  padding:15px;
-  width:90%;
-  max-width:420px;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
   gap:15px;
+  padding:15px;
 }
 
-.service img{
-  width:50px;
-  height:50px;
-}
-
-.service span{
-  font-size:17px;
-}
-
-.call-box{
-  text-align:center;
-  margin:30px 0;
-}
-
-.call-box h2{
-  margin:10px 0;
-}
-
-.call-btn{
-  background:green;
-  color:#fff;
-  padding:12px 25px;
-  font-size:18px;
-  border:none;
-  border-radius:8px;
-}
-
-.banner{
-  background:yellow;
+.card{
+  background:#ffffff;
   color:#000;
+  border-radius:16px;
+  padding:18px 10px;
   text-align:center;
-  padding:10px;
-  font-weight:bold;
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.card img{
+  width:50px;
+  margin-bottom:8px;
+}
+
+.card span{
   font-size:14px;
+  font-weight:bold;
+}
+
+.bottom-bar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#000;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+
+.bottom-bar a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
 }
 </style>
 </head>
@@ -79,66 +81,41 @@ body{
 <body>
 
 <div class="header">MAAHEER</div>
-<div class="header-sub">ONLINE SERVICES</div>
+<div class="sub">ONLINE SERVICES</div>
 
-<div class="service">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-  <span>పాన్ కార్డ్ దరఖాస్తు<br>PAN Card Apply</span>
+<div class="grid">
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+    <span>PAN Card Apply</span>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
+    <span>Aadhaar PDF</span>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png">
+    <span>Voter ID</span>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048313.png">
+    <span>Vehicle RC</span>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
+    <span>Driving Licence</span>
+  </div>
+
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png">
+    <span>Insurance</span>
+  </div>
+
 </div>
 
-<div class="service">
-  
-  <span>పాన్ నంబర్ తెలుసుకోండి<br>PAN Number Find</span>
-</div>
-
-<div class="service">
-  <img src="images/pdf.png">
-  <span>పాన్ కార్డ్ PDF డౌన్లోడ్<br>PAN Card PDF</span>
-</div>
-
-<div class="service">
-  <img src="images/voter.png">
-  <span>వోటర్ కార్డ్ దరఖాస్తు<br>Voter Card Apply</span>
-</div>
-
-<div class="service">
-  <img src="images/voterpdf.png">
-  <span>వోటర్ కార్డ్ PDF డౌన్లోడ్<br>Voter Card PDF</span>
-</div>
-
-<div class="service">
-  <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png">
-  
-  <span>ఆధార్ కార్డ్ PDF డౌన్లోడ్<br>Aadhaar Card PDF</span>
-</div>
-
-<div class="service">
-  <img src="https://cdn-icons-png.flaticon.com/512/1048/1048313.png">
-  <span>వాహన RC PDF డౌన్లోడ్<br>Vehicle RC</span>
-</div>
-
-<div class="service">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
-  <span>డ్రైవింగ్ లైసెన్స్ PDF<br>Driving Licence</span>
-</div>
-
-<div class="service">
-  <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png">
-  <span>అన్ని వాహనాల బీమా సేవలు<br>Vehicle Insurance</span>
-</div>
-
-<div class="call-box">
-  <h2>Call Now</h2>
-  <h2>9494133921</h2>
-  <a href="tel:9494133921">
-    <button class="call-btn">📞 Call Now</button>
-  </a>
-</div>
-
-<div class="banner">
-  CREDIT CARD → BANK TRANSFER<br>
-  Lowest Charges • No Extra Fees
-</div>
-
-</body>
-</html>
+<div class="bottom-bar">
+  <a href="
