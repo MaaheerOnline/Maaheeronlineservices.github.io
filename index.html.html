@@ -1,170 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maakeer Online Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAAHEER Online Services</title>
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #004d99;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  .header {
-    text-align: center;
-    padding: 30px 10px 20px 10px;
-    font-weight: bold;
-    font-size: 2.5rem;
-  }
-  .header-sub {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-  .services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-  }
-  .service-card {
-    background: #1a75ff;
-    border-radius: 10px;
-    width: 190px;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  .service-card:hover {
-    background: #0066cc;
-  }
-  .service-icon {
-    font-size: 50px;
-    margin-bottom: 15px;
-  }
-  .service-text {
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  .contact-section {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-  .phone-number {
-    font-size: 3rem;
-    margin-top: 10px;
-  }
-  .payment-section {
-    background: yellow;
-    color: black;
-    padding: 25px 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  .payment-icons {
-    margin: 15px 0 0 0;
-  }
-  .payment-icons svg {
-    fill: black;
-    width: 50px;
-    vertical-align: middle;
-    margin: 0 10px;
-  }
-  @media (max-width: 600px) {
-    .services-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-    .service-card {
-      width: 90%;
-    }
-  }
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#004d99;
+  color:white;
+  text-align:center;
+}
+.header{
+  padding:30px 10px;
+  font-size:36px;
+  font-weight:bold;
+}
+.sub{
+  font-size:20px;
+  margin-bottom:30px;
+}
+.box{
+  background:#1a75ff;
+  margin:15px auto;
+  padding:20px;
+  width:90%;
+  max-width:400px;
+  border-radius:10px;
+  font-size:18px;
+}
+.call{
+  margin:30px;
+  font-size:28px;
+  font-weight:bold;
+}
+.btn{
+  display:inline-block;
+  padding:15px 30px;
+  background:green;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:20px;
+}
+.footer{
+  background:yellow;
+  color:black;
+  padding:20px;
+  margin-top:40px;
+  font-weight:bold;
+}
 </style>
 </head>
+
 <body>
-  <header>
-    <div class="header">MAAHEER</div>
-    <div class="header-sub">ONLINE SERVICES</div>
-  </header>
-  <section class="services-grid" aria-label="Services offered">
-    <!-- First row -->
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">🆔</div>
-      <div class="service-text">PAN Card Apply</div>
-    </div>
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">🔍</div>
-      <div class="service-text">PAN Number Find</div>
-    </div>
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">📄</div>
-      <div class="service-text">PAN Card PDF Download</div>
-    </div>
-    <!-- Second row -->
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">👤</div>
-      <div class="service-text">Voter Card Apply</div>
-    </div>
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">📄</div>
-      <div class="service-text">Voter Card PDF Download</div>
-    </div>
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">📄</div>
-      <div class="service-text">Aadhar Card PDF Download</div>
-    </div>
-    <!-- Third row -->
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">🚗</div>
-      <div class="service-text">Vehicle RC PDF Download</div>
-    </div>
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">📄</div>
-      <div class="service-text">Driving Licence PDF Download</div>
-    </div>
-    <div class="service-card" tabindex="0">
-      <div class="service-icon">☂️</div>
-      <div class="service-text">All Vehicles Insurance Apply</div>
-    </div>
-  </section>
-  <section class="contact-section" aria-label="Contact information">
-    For more details contact
-    <div class="phone-number">9494133921</div>
-  </section>
-  <section class="services-grid" aria-label="Additional services" style="max-width: 600px; margin:auto 0 40px 0;">
-    <div class="service-card" style="width: 100%;" tabindex="0">
-      <div class="service-icon">📄</div>
-      <div class="service-text">Vehicle RC PDF Download</div>
-    </div>
-    <div class="service-card" style="width: 100%;" tabindex="0">
-      <div class="service-icon">📄</div>
-      <div class="service-text">Driving Licence PDF Download</div>
-    </div>
-    <div class="service-card" style="width: 100%;" tabindex="0">
-      <div class="service-icon">📄</div>
-      <div class="service-text">Ration Card PDF Download</div>
-    </div>
-    <div class="service-card" style="width: 100%; font-size: 1.3rem;" tabindex="0">
-      All Types of Vehicles Insurance
-    </div>
-  </section>
-  <section class="payment-section" aria-label="Payment information">
-    <div>CREDIT CARD → BANK TRANSFER</div>
-    <div>Lowest charges &bull; No extra bank fees</div>
-    <div class="payment-icons" aria-hidden="true">
-      <!-- Card icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2" ry="2" style="fill:black"/></svg>
-      <!-- Bank icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 10 L12 2 L21 10 L19 10 L19 20 L5 20 L5 10 Z" style="fill:black"/></svg>
-    </div>
-    <div style="margin-top: 15px;">FOR DETAILS: <strong>9494133921</strong></div>
-  </section>
+
+<div class="header">MAAHEER</div>
+<div class="sub">ONLINE SERVICES</div>
+
+<div class="box">PAN Card Apply</div>
+<div class="box">PAN Number Find</div>
+<div class="box">PAN Card PDF Download</div>
+<div class="box">Voter Card Apply</div>
+<div class="box">Voter Card PDF Download</div>
+<div class="box">Aadhar Card PDF Download</div>
+<div class="box">Vehicle RC PDF Download</div>
+<div class="box">Driving Licence PDF Download</div>
+<div class="box">All Vehicle Insurance</div>
+
+<div class="call">
+Call Now<br>
+9494133921
+</div>
+
+<a class="btn" href="tel:9494133921">📞 Call Now</a>
+
+<div class="footer">
+CREDIT CARD → BANK TRANSFER<br>
+Lowest Charges • No Extra Fees
+</div>
+
 </body>
 </html>
