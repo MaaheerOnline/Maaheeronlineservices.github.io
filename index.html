@@ -1,78 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maheer Online Services</title>
 
-
-<style>.service{
-  background:#1a75ff;
-  margin:15px auto;
-  padding:15px;
-  width:90%;
-  max-width:420px;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
-  gap:15px;
-  text-align:left;
-}
-.service img{
-  width:50px;
-  height:50px;
-}
-.service span{
-  font-size:17px;
-}
-
-
-
-
+<style>
 body{
   margin:0;
-  font-family:Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background:#004d99;
-  color:white;
-  text-align:center;
+  color:#fff;
 }
+
 .header{
-  padding:30px 10px;
-  font-size:36px;
+  text-align:center;
+  padding:30px 10px 10px;
+  font-size:32px;
   font-weight:bold;
 }
-.sub{
-  font-size:20px;
-  margin-bottom:30px;
+
+.header-sub{
+  text-align:center;
+  font-size:14px;
+  margin-bottom:20px;
 }
-.box{
-  background:#1a75ff;
-  margin:15px auto;
-  padding:20px;
-  width:90%;
-  max-width:400px;
-  border-radius:10px;
-  font-size:18px;
-}
-.call{
-  margin:30px;
-  font-size:28px;
-  font-weight:bold;
-}
-.btn{
-  display:inline-block;
-  padding:15px 30px;
-  background:green;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-size:20px;
-}
-.footer{
-  background:yellow;
-  color:black;
-  padding:20px;
-  margin-top:40px;
-  font-weight:bold;
-}
-</style>.service{
+
+.service{
   background:#1a75ff;
   margin:15px auto;
   padding:15px;
@@ -82,113 +36,108 @@ body{
   display:flex;
   align-items:center;
   gap:15px;
-  text-align:left;
 }
+
 .service img{
   width:50px;
   height:50px;
 }
+
 .service span{
   font-size:17px;
 }
 
+.call-box{
+  text-align:center;
+  margin:30px 0;
+}
 
+.call-box h2{
+  margin:10px 0;
+}
+
+.call-btn{
+  background:green;
+  color:#fff;
+  padding:12px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:8px;
+}
+
+.banner{
+  background:yellow;
+  color:#000;
+  text-align:center;
+  padding:10px;
+  font-weight:bold;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
 <div class="header">MAAHEER</div>
-<div class="sub">ONLINE SERVICES</div>
+<div class="header-sub">ONLINE SERVICES</div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/pan-card.png">
-  <span>పాన్ కార్డ్ దరఖాస్తు<br><small>PAN Card Apply</small></span>
-</div>
-
-<div class="service">
-  <img src="https://img.icons8.com/color/96/search.png">
-  <span>పాన్ నెంబర్ తెలుసుకోండి<br><small>PAN Number Find</small></span>
+  <img src="images/pan.png">
+  <span>పాన్ కార్డ్ దరఖాస్తు<br>PAN Card Apply</span>
 </div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/document.png">
-  <span>పాన్ కార్డ్ PDF డౌన్‌లోడ్<br><small>PAN Card PDF</small></span>
+  <img src="images/search.png">
+  <span>పాన్ నంబర్ తెలుసుకోండి<br>PAN Number Find</span>
 </div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/voter-id.png">
-  <span>వోటర్ కార్డ్ దరఖాస్తు<br><small>Voter Card Apply</small></span>
+  <img src="images/pdf.png">
+  <span>పాన్ కార్డ్ PDF డౌన్లోడ్<br>PAN Card PDF</span>
 </div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/id-card.png">
-  <span>వోటర్ కార్డ్ PDF డౌన్‌లోడ్<br><small>Voter Card PDF</small></span>
+  <img src="images/voter.png">
+  <span>వోటర్ కార్డ్ దరఖాస్తు<br>Voter Card Apply</span>
 </div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/aadhaar-card.png">
-  <span>ఆధార్ కార్డ్ PDF డౌన్‌లోడ్<br><small>Aadhar Card PDF</small></span>
+  <img src="images/voterpdf.png">
+  <span>వోటర్ కార్డ్ PDF డౌన్లోడ్<br>Voter Card PDF</span>
 </div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/car.png">
-  <span>వాహన RC PDF డౌన్‌లోడ్<br><small>Vehicle RC</small></span>
+  <img src="images/aadhaar.png">
+  <span>ఆధార్ కార్డ్ PDF డౌన్లోడ్<br>Aadhaar Card PDF</span>
 </div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/driving-license.png">
-  <span>డ్రైవింగ్ లైసెన్స్ PDF<br><small>Driving Licence</small></span>
+  <img src="images/rc.png">
+  <span>వాహన RC PDF డౌన్లోడ్<br>Vehicle RC</span>
 </div>
 
 <div class="service">
-  <img src="https://img.icons8.com/color/96/insurance.png">
-  <span>అన్ని వాహనాల బీమా సేవలు<br><small>Vehicle Insurance</small></span>
+  <img src="images/dl.png">
+  <span>డ్రైవింగ్ లైసెన్స్ PDF<br>Driving Licence</span>
 </div>
 
-
-<div class="call">
-Call Now<br>
-9494133921
+<div class="service">
+  <img src="images/insurance.png">
+  <span>అన్ని వాహనాల బీమా సేవలు<br>Vehicle Insurance</span>
 </div>
 
-<a class="btn" href="tel:9494133921">📞 Call Now</a>
-
-<div class="footer">
-CREDIT CARD → BANK TRANSFER<br>
-Lowest Charges • No Extra Fees
+<div class="call-box">
+  <h2>Call Now</h2>
+  <h2>9494133921</h2>
+  <a href="tel:9494133921">
+    <button class="call-btn">📞 Call Now</button>
+  </a>
 </div>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919494133921" target="_blank"
-   style="
-   position:fixed;
-   bottom:20px;
-   right:20px;
-   background:#25D366;
-   color:white;
-   padding:15px 18px;
-   border-radius:50%;
-   font-size:26px;
-   text-decoration:none;
-   box-shadow:0 4px 8px rgba(0,0,0,0.3);
-   z-index:1000;">
-💬
-</a>
+<div class="banner">
+  CREDIT CARD → BANK TRANSFER<br>
+  Lowest Charges • No Extra Fees
+</div>
 
-<!-- Call Floating Button -->
-<a href="tel:9494133921"
-   style="
-   position:fixed;
-   bottom:90px;
-   right:20px;
-   background:#0a58ca;
-   color:white;
-   padding:15px 18px;
-   border-radius:50%;
-   font-size:26px;
-   text-decoration:none;
-   box-shadow:0 4px 8px rgba(0,0,0,0.3);
-   z-index:1000;">
-📞
-</a></body>
+</body>
 </html>
