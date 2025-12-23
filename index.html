@@ -36,6 +36,73 @@ body{
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  padding:15px;
-  margin-bottom
+  gap:16px;
+  padding:16px;
+  margin-bottom:80px;
+}
+
+/* Card */
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:20px 10px;
+  text-align:center;
+  text-decoration:none;
+  color:#000;
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+  transition:0.25s;
+}
+
+.card:active{
+  transform:scale(0.96);
+}
+
+/* ICON – DOCUMENT STYLE */
+.card img{
+  width:54px;
+  height:54px;
+  display:block;
+  margin:0 auto 12px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+
+.card span{
+  display:block;
+  font-size:15px;
+  font-weight:bold;
+}
+
+/* Bottom bar */
+.bottom-bar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#0b3c5d;
+  display:flex;
+  justify-content:space-around;
+  padding:12px 0;
+}
+
+.bottom-bar a{
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>MAAHEER</h1>
+  <p>ONLINE SERVICES</p>
+</div>
+
+<!-- SERVICES GRID -->
+<div class="grid">
+
+  <!-- PAN CARD -->
+  <a class="card" href="https://wa.me/919494133
