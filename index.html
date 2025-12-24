@@ -1,120 +1,167 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maaheer Online Services</title>
+<title>Maheer Online Services</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body{
+*{
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#f2f6ff;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
+body{
+  background:#f2f5f9;
+}
+
+/* ===== HEADER ===== */
 .header{
-  background:#0a3d91;
-  color:white;
+  background:linear-gradient(135deg,#0b3c91,#0a66c2);
   text-align:center;
-  padding:25px 10px;
+  padding:25px 15px 30px;
+  color:#fff;
 }
 
 .header img{
-  width:80px;
-  display:block;
-  margin:0 auto 10px;
+  width:90px;
+  margin-bottom:10px;
 }
 
 .header h1{
-  margin:0;
-  font-size:26px;
+  font-size:22px;
+  font-weight:600;
 }
 
-.container{
-  padding:20px;
+.header p{
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard{
+  padding:15px;
+  max-width:500px;
+  margin:auto;
 }
 
 .card{
-  background:white;
-  padding:15px;
+  background:#fff;
+  border-radius:14px;
+  padding:18px;
   margin-bottom:15px;
-  border-radius:10px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
-.card h3{
-  margin-top:0;
-  color:#0a3d91;
+.card-header{
+  display:flex;
+  align-items:center;
+  margin-bottom:8px;
 }
 
-.card a{
+.icon{
+  font-size:22px;
+  margin-right:10px;
+}
+
+.card h2{
+  font-size:16px;
+  font-weight:600;
+  color:#0b3c91;
+}
+
+.card p{
+  font-size:13px;
+  color:#555;
+  margin-bottom:12px;
+}
+
+.btn{
   display:inline-block;
-  margin-top:10px;
-  padding:10px 15px;
-  background:#0a3d91;
-  color:white;
+  padding:8px 18px;
+  background:#0a66c2;
+  color:#fff;
+  font-size:13px;
+  border-radius:20px;
   text-decoration:none;
-  border-radius:6px;
+  font-weight:500;
 }
 
+/* ===== WHATSAPP ===== */
 .whatsapp{
   position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
+  bottom:18px;
+  right:18px;
+  background:#25d366;
+  color:#fff;
   padding:12px 18px;
-  border-radius:50px;
+  border-radius:30px;
   text-decoration:none;
-  font-weight:bold;
+  font-size:14px;
+  font-weight:500;
+  box-shadow:0 6px 15px rgba(0,0,0,0.3);
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
-  <img src="maaheer-logo.png" alt="Maaheer Logo">
-  <h1>Maaheer Online Services</h1>
+  <img src="maaheer-logo.png" alt="Maheer Logo">
+  <h1>Maheer Online Services</h1>
   <p>Fast • Secure • Genuine</p>
 </div>
 
-<div class="container">
+<!-- DASHBOARD -->
+<div class="dashboard">
 
   <div class="card">
-    <h3>🆔 PAN Card Services</h3>
+    <div class="card-header">
+      <div class="icon">🪪</div>
+      <h2>PAN Card Services</h2>
+    </div>
     <p>PAN Apply, Correction, PDF Download</p>
-    <a href="pan.html">Open</a>
+    <a href="pan.html" class="btn">Open</a>
   </div>
 
   <div class="card">
-    <h3>🪪 Aadhaar Services</h3>
+    <div class="card-header">
+      <div class="icon">🆔</div>
+      <h2>Aadhaar Services</h2>
+    </div>
     <p>Aadhaar PDF Download</p>
-    <a href="adhar.html">Open</a>
+    <a href="adhar.html" class="btn">Open</a>
   </div>
 
   <div class="card">
-    <h3>🗳️ Voter ID Services</h3>
+    <div class="card-header">
+      <div class="icon">🗳️</div>
+      <h2>Voter ID Services</h2>
+    </div>
     <p>Apply & Download</p>
-    <a href="voter.html">Open</a>
+    <a href="voter.html" class="btn">Open</a>
   </div>
 
   <div class="card">
-    <h3>🚗 Vehicle Services</h3>
-    <p>RC & Insurance</p>
-    <a href="rc.html">Open</a>
-  </div>
-
-  <div class="card">
-    <h3>🪪 Driving Licence</h3>
-    <p>DL PDF Download</p>
-    <a href="dl.html">Open</a>
+    <div class="card-header">
+      <div class="icon">🚗</div>
+      <h2>Vehicle Services</h2>
+    </div>
+    <p>RC, Insurance & Vehicle Details</p>
+    <a href="rc.html" class="btn">Open</a>
   </div>
 
 </div>
 
-<a class="whatsapp" href="https://wa.me/919494133921" target="_blank">
-WhatsApp
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+  WhatsApp
 </a>
 
 </body>
