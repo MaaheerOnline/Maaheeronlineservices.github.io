@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maaheer Online Services & CC Agency</title>
+    <title>Maaheer Online Services & Agency</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --navy: #050a30;
-            --gold: #d4af37;
+            --navy: #050a30;    /* Premium Deep Navy */
+            --gold: #d4af37;    /* Metallic Gold */
             --white: #ffffff;
-            --bg: #f8fafc;
+            --bg: #f4f7f9;
             --whatsapp: #25d366;
         }
 
@@ -30,66 +30,75 @@
             border-bottom: 3px solid var(--gold);
         }
         .nav-brand { display: flex; align-items: center; gap: 12px; color: white; cursor: pointer; text-decoration: none; }
-        .nav-logo { width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; }
-        .nav-title { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-home { background: var(--gold); color: var(--navy); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.8rem; border: none; cursor: pointer; }
+        .nav-logo { width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover; background: white; }
+        .nav-title { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-home { background: var(--gold); color: var(--navy); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; }
 
-        /* Hero Header */
-        .hero { background: var(--navy); color: white; text-align: center; padding: 60px 20px; border-radius: 0 0 40px 40px; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; color: var(--gold); margin-bottom: 10px; line-height: 1.2; }
-        .hero p { opacity: 0.8; font-size: 1rem; }
+        /* Dashboard Header */
+        .hero { background: var(--navy); color: white; text-align: center; padding: 50px 20px; border-radius: 0 0 35px 35px; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--gold); margin-bottom: 8px; }
+        .hero p { opacity: 0.8; font-size: 0.95rem; }
 
-        /* Grid System */
-        .container { max-width: 1200px; margin: auto; padding: 30px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        /* Dashboard Grid */
+        .container { max-width: 1200px; margin: auto; padding: 25px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         
         .card { 
             background: var(--white); 
-            border-radius: 20px; 
+            border-radius: 18px; 
             overflow: hidden; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            box-shadow: 0 8px 15px rgba(0,0,0,0.06); 
             cursor: pointer; 
-            transition: 0.3s ease;
-            border: 1px solid #e2e8f0;
+            transition: transform 0.3s, border-color 0.3s;
+            border: 1px solid #e1e4e8;
+            text-align: center;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        
-        .card-img { width: 100%; height: 200px; object-fit: cover; background-color: #f1f5f9; display: block; }
-        .card-body { padding: 20px; text-align: center; }
-        .card-body h3 { font-size: 1rem; font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        .card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 12px 25px rgba(0,0,0,0.12); }
+        .card-img { width: 100%; height: 180px; object-fit: cover; background-color: #eee; }
+        .card-body { padding: 20px; border-top: 2px solid #f8f9fa; }
+        .card-body h3 { font-size: 1rem; font-family: 'Montserrat', sans-serif; color: var(--navy); }
 
-        /* Detail Pages Management */
+        /* Page Display System */
         .page { display: none; width: 100%; }
-        .page.active { display: block; animation: fadeInUp 0.4s ease; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .page.active { display: block; animation: slideIn 0.3s ease-out; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-        .detail-card { background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); max-width: 800px; margin: 20px auto; }
-        .detail-img { width: 100%; height: 350px; object-fit: cover; }
+        /* Detail Card Layout */
+        .detail-card { background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1); max-width: 850px; margin: 15px auto; }
+        .detail-img { width: 100%; height: 320px; object-fit: cover; }
         .detail-info { padding: 35px; }
-        .detail-info h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 15px; border-bottom: 2px solid var(--bg); padding-bottom: 10px; color: var(--navy); }
+        .detail-info h2 { font-family: 'Montserrat', sans-serif; margin-bottom: 15px; border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 5px; }
         
         .service-list { list-style: none; margin: 20px 0; }
-        .service-list li { padding: 12px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; font-size: 1.1rem; color: #444; }
-        .service-list li i { color: var(--gold); margin-right: 15px; width: 20px; }
+        .service-list li { padding: 12px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; font-size: 1.1rem; }
+        .service-list li i { color: var(--gold); margin-right: 15px; font-size: 1.2rem; }
 
-        /* Buttons */
+        /* Action Buttons */
         .btn-whatsapp { 
             background: var(--whatsapp); color: white; text-decoration: none; 
-            padding: 18px; border-radius: 12px; display: flex; 
+            padding: 18px; border-radius: 15px; display: flex; 
             justify-content: center; align-items: center; gap: 12px; 
-            font-weight: 700; font-size: 1.2rem; transition: 0.3s;
+            font-weight: 700; font-size: 1.2rem; transition: 0.2s;
         }
         .btn-whatsapp:hover { background: #1eb954; transform: scale(1.02); }
 
-        footer { background: var(--navy); color: white; text-align: center; padding: 60px 20px; margin-top: 60px; border-top: 5px solid var(--gold); }
-        .footer-logo { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--gold); margin-bottom: 20px; }
+        /* Footer */
+        footer { background: var(--navy); color: white; text-align: center; padding: 50px 20px; margin-top: 50px; border-top: 5px solid var(--gold); }
+        .footer-logo { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--gold); margin-bottom: 15px; background: white; }
+
+        /* Responsive Mobile Fix */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.3rem; }
+            .detail-img { height: 200px; }
+            .nav-title { font-size: 0.8rem; }
+        }
     </style>
 </head>
 <body>
 
 <nav>
     <div class="nav-brand" onclick="showPage('home')">
-        <img src="logo.jpg" alt="M" class="nav-logo" onerror="this.src='https://via.placeholder.com/100/050a30/d4af37?text=M'">
+        <img src="logo.jpg" alt="M" class="nav-logo" onerror="this.src='https://via.placeholder.com/50/050a30/ffffff?text=M'">
         <div class="nav-title">Maaheer Agency</div>
     </div>
     <button class="btn-home" onclick="showPage('home')">HOME</button>
@@ -98,32 +107,32 @@
 <div id="home" class="page active">
     <div class="hero">
         <h1>MAAHEER ONLINE SERVICES &<br>CC TO BANK TRANSFER AGENCY</h1>
-        <p>Premium Financial Transfers & Digital Solutions Hub</p>
+        <p>Premium Financial Hub • Proddatur, Andhra Pradesh</p>
     </div>
     <div class="container">
         <div class="grid">
             <div class="card" onclick="showPage('agency')">
-                <img src="agency.jpg" class="card-img" alt="Agency" onerror="this.src='https://images.unsplash.com/photo-1563013544-824ae1b90465?w=500'">
+                <img src="agency.jpg" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=500'">
                 <div class="card-body"><h3>CC TO BANK AGENCY</h3></div>
             </div>
             <div class="card" onclick="showPage('adhar')">
-                <img src="adhar.jpg" class="card-img" alt="Aadhar" onerror="this.src='https://images.unsplash.com/photo-1626268667148-98a96ec72d4b?w=500'">
+                <img src="adhar.jpg" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1626268667148-98a96ec72d4b?w=500'">
                 <div class="card-body"><h3>AADHAR SERVICES</h3></div>
             </div>
             <div class="card" onclick="showPage('pan')">
-                <img src="pan.jpg" class="card-img" alt="PAN" onerror="this.src='https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=500'">
+                <img src="pan.jpg" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1563013544-824ae1b90465?w=500'">
                 <div class="card-body"><h3>PAN CARD HUB</h3></div>
             </div>
             <div class="card" onclick="showPage('voter')">
-                <img src="voter.jpg" class="card-img" alt="Voter" onerror="this.src='https://images.unsplash.com/photo-1540910419842-df18d29d10cd?w=500'">
+                <img src="voter.jpg" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1540910419842-df18d29d10cd?w=500'">
                 <div class="card-body"><h3>VOTER SERVICES</h3></div>
             </div>
             <div class="card" onclick="showPage('insurance')">
-                <img src="insurance.jpg" class="card-img" alt="Insurance" onerror="this.src='https://images.unsplash.com/photo-1533558701576-23c65e0272fb?w=500'">
+                <img src="insurance.jpg" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1533558701576-23c65e0272fb?w=500'">
                 <div class="card-body"><h3>VEHICLE INSURANCE</h3></div>
             </div>
             <div class="card" onclick="showPage('govt')">
-                <img src="passport.jpg" class="card-img" alt="Passport" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=500'">
+                <img src="passport.jpg" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=500'">
                 <div class="card-body"><h3>GOVT & TRAVEL</h3></div>
             </div>
         </div>
@@ -137,11 +146,11 @@
             <div class="detail-info">
                 <h2>CC to Bank Agency</h2>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Instant Card to Bank Transfer</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Authorized Retailer ID Provider</li>
-                    <li><i class="fa-solid fa-check-circle"></i> High Security & Low Commissions</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Instant Card to Bank Transfers</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Retailer ID Provision</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Low Charges & 24/7 Agency Support</li>
                 </ul>
-                <a href="https://wa.me/919494133921?text=Hi, I want CC to Bank Agency ID" class="btn-whatsapp">
+                <a href="https://wa.me/919494133921?text=Hi, I want a Retailer ID for CC transfers" class="btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> CONNECT WITH AGENCY
                 </a>
             </div>
@@ -156,9 +165,9 @@
             <div class="detail-info">
                 <h2>Aadhar Card Services</h2>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Digital Aadhar Download</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Address Update & Correction</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Mobile Number Linking Info</li>
+                    <li><i class="fa-solid fa-circle-check"></i> High Quality Aadhar Download</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Address Change & Corrections</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Linking & Finding Aadhar Info</li>
                 </ul>
                 <a href="https://wa.me/919494133921?text=Hi, I need Aadhar help" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> REQUEST SERVICE</a>
             </div>
@@ -169,13 +178,13 @@
 <div id="pan" class="page">
     <div class="container">
         <div class="detail-card">
-            <img src="pan.jpg" class="detail-img" onerror="this.src='https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=800'">
+            <img src="pan.jpg" class="detail-img" onerror="this.src='https://images.unsplash.com/photo-1563013544-824ae1b90465?w=800'">
             <div class="detail-info">
                 <h2>PAN Card Hub</h2>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> New PAN Card Application</li>
-                    <li><i class="fa-solid fa-check-circle"></i> PAN Correction & Updates</li>
-                    <li><i class="fa-solid fa-check-circle"></i> PAN-Aadhar Linking Service</li>
+                    <li><i class="fa-solid fa-circle-check"></i> New Application & Correction</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Instant e-PAN Provision</li>
+                    <li><i class="fa-solid fa-circle-check"></i> PAN-Aadhar Linking Assistance</li>
                 </ul>
                 <a href="https://wa.me/919494133921?text=Hi, I need PAN card services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> REQUEST SERVICE</a>
             </div>
@@ -190,11 +199,11 @@
             <div class="detail-info">
                 <h2>Voter Services</h2>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> New Voter ID Registration</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Correction & Mobile Linking</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Digital Voter Card Download</li>
+                    <li><i class="fa-solid fa-circle-check"></i> New Registration & Replacement</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Photo & Address Corrections</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Digital ID Download Support</li>
                 </ul>
-                <a href="https://wa.me/919494133921?text=Hi, I need Voter services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> REQUEST SERVICE</a>
+                <a href="https://wa.me/919494133921?text=Hi, I need Voter ID help" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> REQUEST SERVICE</a>
             </div>
         </div>
     </div>
@@ -207,11 +216,11 @@
             <div class="detail-info">
                 <h2>Vehicle Insurance</h2>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Bike & Scooter Insurance</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Car & Auto Rickshaw Insurance</li>
-                    <li><i class="fa-solid fa-check-circle"></i> All Commercial Vehicle Policies</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Bike & Private Car Policies</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Auto & Commercial Vehicle Plans</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Instant Policy Copy on WhatsApp</li>
                 </ul>
-                <a href="https://wa.me/919494133921?text=Hi, I need Vehicle Insurance" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> GET INSTANT QUOTE</a>
+                <a href="https://wa.me/919494133921?text=Hi, I need a Vehicle Insurance Quote" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> GET INSTANT QUOTE</a>
             </div>
         </div>
     </div>
@@ -222,48 +231,41 @@
         <div class="detail-card">
             <img src="passport.jpg" class="detail-img" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800'">
             <div class="detail-info">
-                <h2>Passport & Govt Services</h2>
+                <h2>Govt & Travel Services</h2>
                 <ul class="service-list">
-                    <li><i class="fa-solid fa-check-circle"></i> New Passport & Renewals</li>
-                    <li><i class="fa-solid fa-check-circle"></i> E-Shram & Ayushman Cards</li>
-                    <li><i class="fa-solid fa-check-circle"></i> RC & Driving License Download</li>
+                    <li><i class="fa-solid fa-circle-check"></i> New Passport & Renewal Assistance</li>
+                    <li><i class="fa-solid fa-circle-check"></i> E-Shram & Ayushman Card Apply</li>
+                    <li><i class="fa-solid fa-circle-check"></i> RC & Driving License Downloads</li>
                 </ul>
-                <a href="https://wa.me/919494133921?text=Hi, I need Govt services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> REQUEST SERVICE</a>
+                <a href="https://wa.me/919494133921?text=Hi, I need help with Govt services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> REQUEST SERVICE</a>
             </div>
         </div>
     </div>
 </div>
 
 <footer>
-    <div class="container">
-        <img src="logo.jpg" alt="Logo" class="footer-logo" onerror="this.style.display='none'">
-        <h2>Maaheer Online Services & Agency</h2>
-        <p>Proddatur, Andhra Pradesh</p>
-        <p><i class="fab fa-whatsapp"></i> Support: +91 9494133921</p>
-    </div>
+    <img src="logo.jpg" alt="Logo" class="footer-logo" onerror="this.style.display='none'">
+    <h2>Maaheer Online Services & Agency</h2>
+    <p>Proddatur, Andhra Pradesh</p>
+    <p>WhatsApp Support: +91 9494133921</p>
 </footer>
 
 <script>
-    // Stable Navigation Function
+    // Robust Page Switching
     function showPage(pageId) {
-        // Find all elements with class 'page'
+        // Hide all pages by removing the 'active' class
         const pages = document.querySelectorAll('.page');
-        
-        // Hide every page
         pages.forEach(page => {
-            page.style.display = 'none';
             page.classList.remove('active');
         });
 
-        // Show the requested page
+        // Show selected page
         const targetPage = document.getElementById(pageId);
         if (targetPage) {
-            targetPage.style.display = 'block';
             targetPage.classList.add('active');
+            // Scroll to top smoothly
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
-
-        // Always scroll to top when switching
-        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 </script>
 
