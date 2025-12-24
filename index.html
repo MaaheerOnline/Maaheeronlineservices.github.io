@@ -3,230 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maaheer Online Services | Digital Hub</title>
+    <title>Maaheer Online Services | Premium Digital Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1e293b;
-            --accent: #2563eb;
+            /* Logo Inspired Palette */
+            --primary: #050a30;    /* Deep Navy Blue from logo background */
+            --secondary: #1b1b1b;  /* Dark Contrast */
+            --accent-gold: #c5a059; /* Gold from the logo's inner ring */
+            --silver: #bdc3c7;      /* Silver from the 'M' symbol */
             --whatsapp: #25d366;
-            --bg: #f1f5f9;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
         }
 
-        body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-light); margin: 0; color: var(--primary); }
         
         /* Navigation */
-        nav { background: var(--primary); padding: 15px 20px; color: white; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-weight: 700; font-size: 1.2rem; cursor: pointer; }
+        nav { 
+            background: var(--primary); 
+            padding: 12px 20px; 
+            color: var(--white); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        
+        .logo-container { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--accent-gold); object-fit: cover; }
+        .logo-text { font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; color: var(--white); }
 
         /* Sections */
-        .page { display: none; padding: 20px; max-width: 1000px; margin: auto; }
-        .active { display: block; animation: fadeIn 0.3s; }
+        .page { display: none; padding: 20px; max-width: 1100px; margin: auto; }
+        .active { display: block; animation: slideUp 0.4s ease-out; }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
         /* Dashboard Grid */
-        .hero { text-align: center; padding: 40px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .hero { text-align: center; padding: 50px 20px; background: white; margin-bottom: 30px; border-bottom: 1px solid #ddd; }
+        .hero h1 { color: var(--primary); margin-bottom: 5px; font-size: 2.2rem; }
+        .hero p { color: #666; font-size: 1.1rem; }
         
-        .card { background: white; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: pointer; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-bottom: 4px solid var(--accent); }
-        .card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
-
-        /* Detail Page Styling */
-        .detail-header { background: white; padding: 30px; border-radius: 15px; margin-bottom: 20px; text-align: center; }
-        .info-box { background: white; padding: 25px; border-radius: 15px; line-height: 1.8; }
-        .info-box ul { padding-left: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         
-        .btn-whatsapp { 
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            background: var(--whatsapp); color: white; padding: 15px 30px; 
-            text-decoration: none; border-radius: 50px; font-weight: 600; margin-top: 20px; 
-            width: 100%; box-sizing: border-box;
+        .card { 
+            background: var(--white); 
+            padding: 30px; 
+            border-radius: 20px; 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
         }
 
-        .back-btn { background: #64748b; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; }
+        .card::before {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--accent-gold); opacity: 0; transition: 0.3s;
+        }
 
-        footer { text-align: center; padding: 40px; color: #64748b; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(5, 10, 48, 0.15); }
+        .card:hover::before { opacity: 1; }
+
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; transition: 0.3s; }
+        .card:hover i { color: var(--accent-gold); }
+        .card h3 { color: var(--primary); margin-bottom: 10px; font-weight: 700; }
+
+        /* Detail Page Styling */
+        .detail-header { background: var(--primary); color: white; padding: 40px; border-radius: 20px; margin-bottom: 25px; text-align: center; border-bottom: 5px solid var(--accent-gold); }
+        .info-box { background: white; padding: 35px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .info-box h3 { border-bottom: 2px solid var(--bg-light); padding-bottom: 10px; margin-bottom: 20px; color: var(--accent-gold); }
+        
+        .service-list { list-style: none; padding: 0; }
+        .service-list li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; font-weight: 500; }
+        .service-list li i { color: var(--accent-gold); margin-right: 15px; }
+        
+        .btn-whatsapp { 
+            display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+            background: var(--whatsapp); color: white; padding: 18px 30px; 
+            text-decoration: none; border-radius: 12px; font-weight: 700; margin-top: 30px; 
+            width: 100%; box-sizing: border-box; font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .back-btn { background: var(--accent-gold); color: var(--primary); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+        footer { text-align: center; padding: 60px 20px; background: var(--primary); color: var(--white); margin-top: 50px; }
+        .footer-logo { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--accent-gold); margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="logo" onclick="showPage('home')">MAAHEER ONLINE</div>
-    <a href="#" class="back-btn" onclick="showPage('home')">Home</a>
+    <div class="logo-container" onclick="showPage('home')">
+        <img src="logo.jpg" alt="Maaheer Logo" class="logo-img">
+        <div class="logo-text">MAAHEER ONLINE</div>
+    </div>
+    <a href="#" class="back-btn" onclick="showPage('home')"><i class="fa-solid fa-house"></i> Home</a>
 </nav>
 
 <div id="home" class="page active">
     <div class="hero">
-        <h1>Welcome to Maaheer Online</h1>
-        <p>Select a service to see details and requirements</p>
+        <h1>Maaheer Online Services</h1>
+        <p>Your Trusted Digital & Financial Solutions Partner</p>
     </div>
     <div class="grid">
         <div class="card" onclick="showPage('adhar')">
             <i class="fa-solid fa-fingerprint"></i>
-            <h3>Aadhar Services</h3>
-            <p>Download, Address Change & Updates</p>
+            <h3>Aadhar Card</h3>
+            <p>Download & Address Updates</p>
         </div>
         <div class="card" onclick="showPage('pan')">
             <i class="fa-solid fa-address-card"></i>
-            <h3>PAN Card Services</h3>
-            <p>New Apply, Correction & Link</p>
+            <h3>PAN Card</h3>
+            <p>Apply, Correction & Link</p>
         </div>
         <div class="card" onclick="showPage('voter')">
             <i class="fa-solid fa-id-badge"></i>
-            <h3>Voter Card</h3>
-            <p>Apply, Correction & Download</p>
+            <h3>Voter Services</h3>
+            <p>Apply, Edit & Mobile Link</p>
         </div>
         <div class="card" onclick="showPage('insurance')">
             <i class="fa-solid fa-shield-halved"></i>
-            <h3>Vehicle Insurance</h3>
+            <h3>Insurance</h3>
             <p>Bike, Car, Auto & Commercial</p>
         </div>
         <div class="card" onclick="showPage('retailer')">
-            <i class="fa-solid fa-money-bill-transfer"></i>
-            <h3>Retailer ID / CC Transfer</h3>
-            <p>Credit Card to Bank Business ID</p>
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Finance</h3>
+            <p>CC to Bank & Retailer IDs</p>
         </div>
-        <div class="card" onclick="showPage('passport')">
-            <i class="fa-solid fa-passport"></i>
-            <h3>Passport & Welfare</h3>
-            <p>Passport, E-Shram & Ayushman</p>
+        <div class="card" onclick="showPage('govt')">
+            <i class="fa-solid fa-file-invoice"></i>
+            <h3>Govt & Travel</h3>
+            <p>Passport, RC, DL & E-Shram</p>
         </div>
     </div>
 </div>
 
 <div id="adhar" class="page">
-    <div class="detail-header">
-        <i class="fa-solid fa-fingerprint" style="font-size: 3rem; color: var(--accent);"></i>
-        <h2>Aadhar Card Services</h2>
-    </div>
+    <div class="detail-header"><h2>Aadhar Card Services</h2></div>
     <div class="info-box">
-        <h3>Services Available:</h3>
-        <ul>
-            <li>Aadhar Card Download (PDF)</li>
-            <li>Address Change Online</li>
-            <li>Biometric Update assistance</li>
-            <li>Aadhar-Mobile Linking status</li>
+        <h3>Services Provided:</h3>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-circle-check"></i> Aadhar Card Download</li>
+            <li><i class="fa-solid fa-circle-check"></i> Aadhar Address Change</li>
         </ul>
-        <p><strong>Documents Required:</strong> Registered Mobile Number for OTP or Proof of Address.</p>
-        <a href="https://wa.me/919494133921?text=I%20need%20Aadhar%20Services" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Message on WhatsApp to Start
-        </a>
+        <a href="https://wa.me/919494133921?text=Hi, I need Aadhar services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Send WhatsApp Request</a>
     </div>
 </div>
 
 <div id="pan" class="page">
-    <div class="detail-header">
-        <i class="fa-solid fa-address-card" style="font-size: 3rem; color: var(--accent);"></i>
-        <h2>PAN Card Services</h2>
-    </div>
+    <div class="detail-header"><h2>PAN Card Services</h2></div>
     <div class="info-box">
-        <h3>Services Available:</h3>
-        <ul>
-            <li>New PAN Card Application</li>
-            <li>PAN Card Correction (Name/DOB/Photo)</li>
-            <li>e-PAN Download / Lost PAN Find</li>
-            <li>PAN-Aadhar Linking</li>
+        <h3>Services Provided:</h3>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-circle-check"></i> New PAN Card Apply</li>
+            <li><i class="fa-solid fa-circle-check"></i> PAN Card Correction</li>
+            <li><i class="fa-solid fa-circle-check"></i> e-PAN Download</li>
+            <li><i class="fa-solid fa-circle-check"></i> Find PAN Number</li>
+            <li><i class="fa-solid fa-circle-check"></i> Link PAN with Aadhar</li>
         </ul>
-        <a href="https://wa.me/919494133921?text=I%20need%20PAN%20Card%20Services" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Contact for PAN Services
-        </a>
-    </div>
-</div>
-
-<div id="insurance" class="page">
-    <div class="detail-header">
-        <i class="fa-solid fa-shield-halved" style="font-size: 3rem; color: var(--accent);"></i>
-        <h2>Vehicle Insurance</h2>
-    </div>
-    <div class="info-box">
-        <h3>Instant Policy for:</h3>
-        <ul>
-            <li>Two Wheeler (Bike/Scooty)</li>
-            <li>Four Wheeler (Car/Jeep)</li>
-            <li>Auto Rickshaw & Passenger Vehicles</li>
-            <li>Commercial Trucks/Loaders</li>
-        </ul>
-        <p>Send a photo of your old RC or Insurance copy to get the lowest quote.</p>
-        <a href="https://wa.me/919494133921?text=I%20need%20a%20Quote%20for%20Vehicle%20Insurance" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Get Insurance Quote
-        </a>
-    </div>
-</div>
-
-<div id="retailer" class="page">
-    <div class="detail-header">
-        <i class="fa-solid fa-money-bill-transfer" style="font-size: 3rem; color: var(--accent);"></i>
-        <h2>Retailer ID & CC Transfer</h2>
-    </div>
-    <div class="info-box">
-        <h3>Business Solutions:</h3>
-        <ul>
-            <li>Credit Card to Bank Account Transfer Retailer ID</li>
-            <li>Lowest transaction charges</li>
-            <li>Instant Settlement to your bank</li>
-            <li>Work from your own shop</li>
-        </ul>
-        <a href="https://wa.me/919494133921?text=Interested%20in%20Retailer%20ID%20and%20CC%20Transfer" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Get Your Retailer ID Now
-        </a>
-    </div>
-</div>
-
-<div id="passport" class="page">
-    <div class="detail-header">
-        <i class="fa-solid fa-passport" style="font-size: 3rem; color: var(--accent);"></i>
-        <h2>Passport & Govt Welfare</h2>
-    </div>
-    <div class="info-box">
-        <h3>Services:</h3>
-        <ul>
-            <li>New Passport Application & Renewal</li>
-            <li>E-Shram Card Registration</li>
-            <li>Ayushman Bharat (Health Card)</li>
-            <li>Vehicle RC / DL Download</li>
-        </ul>
-        <a href="https://wa.me/919494133921?text=I%20need%20Passport/Govt%20Service%20help" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Inquire Now
-        </a>
+        <a href="https://wa.me/919494133921?text=Hi, I need PAN card services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Send WhatsApp Request</a>
     </div>
 </div>
 
 <div id="voter" class="page">
-    <div class="detail-header">
-        <i class="fa-solid fa-id-badge" style="font-size: 3rem; color: var(--accent);"></i>
-        <h2>Voter Card Services</h2>
-    </div>
+    <div class="detail-header"><h2>Voter Card Services</h2></div>
     <div class="info-box">
-        <h3>Services:</h3>
-        <ul>
-            <li>New Voter Registration</li>
-            <li>Voter Card Correction</li>
-            <li>Link Mobile Number to Voter ID</li>
-            <li>Digital Voter ID Download</li>
+        <h3>Services Provided:</h3>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-circle-check"></i> New Voter Card Apply</li>
+            <li><i class="fa-solid fa-circle-check"></i> Voter Card Correction</li>
+            <li><i class="fa-solid fa-circle-check"></i> Link Mobile Number</li>
+            <li><i class="fa-solid fa-circle-check"></i> Voter Card Download</li>
         </ul>
-        <a href="https://wa.me/919494133921?text=I%20need%20Voter%20Card%20help" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Get Help with Voter ID
-        </a>
+        <a href="https://wa.me/919494133921?text=Hi, I need Voter card services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Send WhatsApp Request</a>
+    </div>
+</div>
+
+<div id="insurance" class="page">
+    <div class="detail-header"><h2>Vehicle Insurance</h2></div>
+    <div class="info-box">
+        <h3>Instant Policy for:</h3>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-circle-check"></i> Two Wheeler (Bike/Scooter)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Auto Rickshaw Insurance</li>
+            <li><i class="fa-solid fa-circle-check"></i> Car / Private Vehicle</li>
+            <li><i class="fa-solid fa-circle-check"></i> All Commercial Vehicles</li>
+        </ul>
+        <a href="https://wa.me/919494133921?text=Hi, I need Vehicle Insurance" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Get Insurance Quote</a>
+    </div>
+</div>
+
+<div id="retailer" class="page">
+    <div class="detail-header"><h2>Retailer ID & Finance</h2></div>
+    <div class="info-box">
+        <h3>Services Provided:</h3>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-circle-check"></i> Credit Card to Bank Transfer</li>
+            <li><i class="fa-solid fa-circle-check"></i> Retailer ID Provider Services</li>
+        </ul>
+        <a href="https://wa.me/919494133921?text=Hi, I want to become a Retailer" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Contact for Finance Services</a>
+    </div>
+</div>
+
+<div id="govt" class="page">
+    <div class="detail-header"><h2>Govt & Travel Services</h2></div>
+    <div class="info-box">
+        <h3>Services Provided:</h3>
+        <ul class="service-list">
+            <li><i class="fa-solid fa-circle-check"></i> New Passport Application</li>
+            <li><i class="fa-solid fa-circle-check"></i> Passport Renewal</li>
+            <li><i class="fa-solid fa-circle-check"></i> E-Shram Card Apply</li>
+            <li><i class="fa-solid fa-circle-check"></i> Ayushman Bharat Apply</li>
+            <li><i class="fa-solid fa-circle-check"></i> Vehicle RC Download</li>
+            <li><i class="fa-solid fa-circle-check"></i> Driving Licence Download</li>
+        </ul>
+        <a href="https://wa.me/919494133921?text=Hi, I need help with Govt services" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Send WhatsApp Request</a>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2024 Maaheer Online Services | Proddatur, AP</p>
+    <img src="logo.jpg" alt="Maaheer Logo" class="footer-logo">
+    <h3>Maaheer Online Services</h3>
+    <p>Proddatur, Andhra Pradesh</p>
+    <p>WhatsApp: +91 9494133921</p>
+    <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">
+        © 2024-2025 Maaheer Online. All Rights Reserved.
+    </div>
 </footer>
 
 <script>
     function showPage(pageId) {
-        // Hide all pages
-        const pages = document.querySelectorAll('.page');
-        pages.forEach(page => page.classList.remove('active'));
-        
-        // Show selected page
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
         document.getElementById(pageId).classList.add('active');
-        
-        // Scroll to top
         window.scrollTo(0,0);
     }
 </script>
