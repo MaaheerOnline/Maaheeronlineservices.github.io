@@ -3,45 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>MAAHEER Online Services</title>
 <link rel="icon" href="./maaheer-logo.png">
+
 <style>
-body{margin:0;font-family:Arial;background:#f2f4f8}
-.header{background:linear-gradient(135deg,#0b3c5d,#06263d);padding:18px;color:#fff;display:flex;align-items:center;gap:14px}
-.header img{width:56px;height:56px;border-radius:50%;background:#fff;padding:6px}
-.header h1{margin:0;font-size:26px}
-.header span{font-size:12px;opacity:.9}
-.tagline{text-align:center;font-weight:bold;color:#0b3c5d;margin:16px}
-.container{padding:16px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.card{background:#fff;padding:18px;border-radius:14px;text-align:center;font-weight:bold;color:#0b3c5d;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.12)}
-.bottom{position:fixed;bottom:0;width:100%;background:#0b3c5d;display:flex;justify-content:space-around;padding:12px}
-.bottom a{color:#fff;text-decoration:none;font-weight:bold}
+/* ===== BASIC ===== */
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f2f4f8;
+}
+
+/* ===== HEADER ===== */
+.header{
+  background:linear-gradient(135deg,#0b3c5d,#06263d);
+  padding:18px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.header img{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#fff;
+  padding:6px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.35);
+}
+.header h1{
+  margin:0;
+  font-size:26px;
+  letter-spacing:2px;
+}
+.header span{
+  font-size:12px;
+  opacity:0.9;
+  letter-spacing:1.5px;
+}
+
+/* ===== TAGLINE ===== */
+.tagline{
+  text-align:center;
+  margin:16px;
+  font-weight:bold;
+  color:#0b3c5d;
+}
+
+/* ===== SERVICE CARDS ===== */
+.container{
+  padding:16px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.card{
+  background:#fff;
+  padding:18px 10px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:bold;
+  color:#0b3c5d;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ===== PAYMENT BUTTON ===== */
+.pay-btn{
+  display:block;
+  margin:25px auto;
+  background:linear-gradient(135deg,#1e8e3e,#34a853);
+  color:#fff;
+  padding:16px;
+  text-align:center;
+  width:90%;
+  max-width:340px;
+  border-radius:16px;
+  font-size:17px;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* ===== BOTTOM BAR ===== */
+.bottom{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#0b3c5d;
+  display:flex;
+  justify-content:space-around;
+  padding:12px 0;
+}
+.bottom a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:15px;
+}
 </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <div class="header">
-<img src="./maaheer-logo.png">
-<div>
-<h1>MAAHEER</h1>
-<span>ONLINE SERVICES</span>
-</div>
+  <img src="./maaheer-logo.png" alt="">
+  <div>
+    <h1>MAAHEER</h1>
+    <span>ONLINE SERVICES</span>
+  </div>
 </div>
 
-<div class="tagline">అన్ని ఆన్‌లైన్ సేవలు ఒకే చోట</div>
+<!-- TAGLINE -->
+<div class="tagline">
+  అన్ని ఆన్‌లైన్ సేవలు ఒకే చోట
+</div>
 
+<!-- SERVICES -->
 <div class="container">
-<a class="card" href="pan.html">పాన్ కార్డ్ సేవలు</a>
-<a class="card" href="aadhaar.html">ఆధార్ కార్డ్ సేవలు</a>
-<a class="card" href="voter.html">ఓటర్ ఐడీ సేవలు</a>
-<a class="card" href="rc.html">వాహన RC సేవలు</a>
-<a class="card" href="dl.html">డ్రైవింగ్ లైసెన్స్ సేవలు</a>
-<a class="card" href="insurance.html">వాహన బీమా సేవలు</a>
+  <a class="card" href="pan.html">పాన్ కార్డ్ సేవలు</a>
+  <a class="card" href="aadhaar.html">ఆధార్ కార్డ్ సేవలు</a>
+  <a class="card" href="voter.html">ఓటర్ ఐడీ సేవలు</a>
+  <a class="card" href="rc.html">వాహన RC సేవలు</a>
+  <a class="card" href="dl.html">డ్రైవింగ్ లైసెన్స్ సేవలు</a>
+  <a class="card" href="insurance.html">వాహన బీమా సేవలు</a>
 </div>
 
+<!-- PAYMENT BUTTON -->
+<a class="pay-btn"
+   href="upi://pay?pa=tmps0807756637853197@slc&pn=Maaheer%20Online%20Services&cu=INR">
+   💳 Pay Now (UPI)
+</a>
+
+<!-- BOTTOM BAR -->
 <div class="bottom">
-<a href="tel:9494133921">📞 కాల్</a>
-<a href="https://wa.me/919494133921">💬 వాట్సాప్</a>
+  <a href="tel:9494133921">📞 కాల్</a>
+  <a href="https://wa.me/919494133921">💬 వాట్సాప్</a>
 </div>
 
 </body>
