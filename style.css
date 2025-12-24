@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5f9;
+  color: #333;
+  text-align: center;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #003366, #0059b3);
+  color: #fff;
+  padding: 40px 15px;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  margin: 10px 0 5px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 5px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.call {
+  background: #ff9800;
+}
+
+/* SERVICES */
+.services {
+  padding: 40px 15px;
+}
+
+.services h2 {
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 60px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0059b3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* WHY US */
+.why {
+  background: #fff;
+  padding: 35px 20px;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 35px 20px;
+  background: #f9fbfd;
+}
+
+/* FOOTER */
+footer {
+  background: #003366;
+  color: #fff;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  opacity: 0.8;
+}
