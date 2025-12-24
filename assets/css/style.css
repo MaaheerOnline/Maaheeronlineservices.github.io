@@ -106,7 +106,9 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 18px;
 }
-
+.card {
+  min-height: 220px;
+}
 .card {
   background: #ffffff;
   border-radius: 15px;
