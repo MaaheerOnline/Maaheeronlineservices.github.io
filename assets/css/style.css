@@ -11,6 +11,52 @@ body {
   max-width: 100%;
   margin-bottom: 10px;
 }
+/* HEADER LAYOUT */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ROUND LOGO */
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;     /* 👈 ROUND */
+  object-fit: cover;
+  background: #fff;
+  padding: 5px;
+}
+
+/* TITLE ALIGN */
+.title-box {
+  text-align: left;
+}
+
+.title-box h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.title-box p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* MOBILE ADJUSTMENT */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title-box {
+    text-align: center;
+  }
+}
 /* HEADER */
 .header {
   background: linear-gradient(135deg, #003366, #0059b3);
