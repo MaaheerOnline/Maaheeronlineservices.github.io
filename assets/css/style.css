@@ -12,7 +12,17 @@ body {
   color: white;
   padding: 35px 15px;
 }
+.main-header {
+  background: #0a1a2f;
+  padding: 20px;
+  text-align: center;
+}
 
+.main-logo {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+}
 .header-inner {
   display: flex;
   justify-content: center;
