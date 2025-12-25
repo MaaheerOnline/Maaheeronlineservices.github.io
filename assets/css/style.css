@@ -17,7 +17,34 @@ body {
   padding: 20px;
   text-align: center;
 }
+.main-header {
+  background: linear-gradient(135deg, #0a1a2f, #003366);
+  padding: 25px 15px;
+  text-align: center;
+}
 
+.logo-box img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;        /* ROUND LOGO */
+  border: 4px solid #ffffff;
+  object-fit: cover;
+  background: #fff;
+}
+
+.site-title {
+  margin-top: 15px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.site-subtitle {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #cce0ff;
+}
 .main-logo {
   max-width: 220px;
   width: 100%;
