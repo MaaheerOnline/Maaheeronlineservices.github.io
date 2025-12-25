@@ -24,24 +24,13 @@ body {
   width: 60px;
   height: 60px;
   background: white;
-  color: #003366;
+  color: #002b5b;
   border-radius: 50%;
   font-size: 28px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-}
-
-.title-box h1 {
-  margin: 0;
-  font-size: 26px;
-}
-
-.title-box p {
-  margin: 4px 0 0;
-  font-size: 14px;
-  opacity: 0.9;
 }
 
 /* BUTTONS */
@@ -56,7 +45,6 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
 }
 
 .whatsapp { background: #25d366; }
@@ -118,27 +106,6 @@ body {
   box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
 }
 
-/* WHY */
-.why {
-  background: #ffffff;
-  padding: 40px 20px;
-}
-
-.why ul {
-  list-style: none;
-  padding: 0;
-}
-
-.why li {
-  margin: 8px 0;
-  font-size: 16px;
-}
-
-/* CONTACT */
-.contact {
-  padding: 40px 20px;
-}
-
 /* FOOTER */
 .footer {
   background: linear-gradient(135deg, #001a33, #002b5b);
@@ -149,11 +116,6 @@ body {
 .footer-box {
   max-width: 600px;
   margin: auto;
-}
-
-.footer h3 {
-  margin: 0 0 5px;
-  color: #ffffff;
 }
 
 .footer hr {
